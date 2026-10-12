@@ -29,3 +29,20 @@ What it doesn't simulate: typing, sorting, live data and permissions. These are 
 ## Scripts
 
 `scripts/` holds the Plugin API scripts used to generate the file through the Figma MCP `use_figma` tool. Each build script is prefixed with `00-helpers.js` (screen scripts also use `05-screen-helpers.js`). All sample figures and names are illustrative.
+
+## v2 revision (operations refocus)
+
+- **Type:** all text styles now use Geist.
+- **Navigation:** Operations (Dashboard, Orders), Directory (Customers, Brokers, Products, Transporters) and Administration (Settings, Users & access, Integrations). Reports, Activity and the Yard board were removed.
+- **Dashboard:**
+  - **KPIs:** Total orders, Active shipments, On-time dispatch rate (measured at gate-out, because delivery isn't tracked) and At-risk shipments.
+  - **Chart:** dispatched-tonnage line with a faint same-hue shadow, compared against the prior period. No invented target and no decorative gradient.
+  - **Cards:** an order-status overview, "Needs attention" (at-risk and exceptions as separate lists, each order counted once) and active shipments.
+- **Orders:** the primary filters are only All and Completed. There are frames for the Completed state and an empty state.
+- **Directory:** list and detail pages for Customers, Brokers and Transporters. Products has a list plus a detail drawer and says plainly that stock isn't tracked.
+- **Notifications:**
+  - **Toasts:** shown top-right and can carry an action link.
+  - **Notification centre:** keeps critical items until someone acknowledges them.
+  - **Page banners:** removed.
+  - **Rules:** documented in the interaction map, which also holds the KPI definitions and route mapping.
+- **Prototype:** 245 links rewired.
